@@ -20,6 +20,7 @@ fn main() {
         .parse::<u32>()
         .expect("we need an integer");
     println!("generating genesis block! ");
+    
     let mut chain = blockchain::Chain::new(miner_addr.trim().to_string(), diff);
 
     loop {
@@ -28,7 +29,7 @@ fn main() {
         println!("2) Mine block");
         println!("3) Change Difficulty");
         println!("4) Change Reward");
-        println!("0) Exit");
+        println!("0) Exit" );
         print!("Enter your choice: ");
         io::stdout().flush();
         choice.clear();
